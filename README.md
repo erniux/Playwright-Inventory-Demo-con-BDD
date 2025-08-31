@@ -1,6 +1,13 @@
 # Playwright Inventory Demo (Python + BDD)
 
-![Playwright Tests](https://github.com/erniux/Playwright-Inventory-Demo-con-BDD/actions/workflows/tests.yml/badge.svg)
+# Playwright Inventory Demo (Python + BDD)
+
+[![Playwright Tests](https://github.com/erniux/Playwright-Inventory-Demo-con-BDD/actions/workflows/tests.yml/badge.svg)](https://github.com/erniux/Playwright-Inventory-Demo-con-BDD/actions/workflows/tests.yml)  
+[![Python Version](https://img.shields.io/badge/python-3.11-blue)](https://www.python.org/)  
+[![Playwright](https://img.shields.io/badge/playwright-installed-119e1a)](https://playwright.dev/)
+
+Este proyecto es un framework de pruebas automatizadas...
+
 
 
 Este proyecto es un **framework de pruebas automatizadas** usando:

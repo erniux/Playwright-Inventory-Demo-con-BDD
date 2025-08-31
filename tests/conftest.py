@@ -1,3 +1,4 @@
+import os
 import pytest
 from playwright.sync_api import sync_playwright
 
@@ -5,7 +6,13 @@ from playwright.sync_api import sync_playwright
 def browser():
     # Lanzar Chromium en modo headed (visible)
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False, slow_mo=500)
+        # Detectar si estamos en CI (GitHub Actions)
+        is_ci = os.getenv("CI") == "true"
+
+        browser = p.chromium.launch(
+            headless=is_ci,  # en CI = headless; local = headed
+            slow_mo=500 if not is_ci else 0
+        )
         yield browser
         browser.close()
 
