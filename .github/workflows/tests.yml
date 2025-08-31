@@ -38,9 +38,22 @@ jobs:
       run: |
         pytest -v --maxfail=1 --disable-warnings --alluredir=allure-results
 
-    - name: 📦 Upload Allure Results
+    - name: 📊 Generate Allure HTML Report
+      run: |
+        pip install allure-pytest  # asegúrate de tener allure en el venv
+        curl -o allure-2.20.1.tgz -L https://github.com/allure-framework/allure2/releases/download/2.20.1/allure-2.20.1.tgz
+        tar -xvzf allure-2.20.1.tgz
+        ./allure-2.20.1/bin/allure generate allure-results -o allure-report --clean
+
+    - name: 📦 Upload Allure HTML Report
       uses: actions/upload-artifact@v4
       with:
-        name: allure-results
-        path: allure-results
-        if-no-files-found: ignore
+        name: allure-report
+        path: allure-report
+        if-no-files-found: error
+
+    - name: 🚀 Deploy Allure Report to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./allure-report
