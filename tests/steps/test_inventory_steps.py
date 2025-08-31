@@ -27,8 +27,10 @@ def check_product_exists(page, product):
 
 @then("I should see no results in the table")
 def check_no_results(page):
+    # Espera hasta que no haya filas visibles
+    page.wait_for_selector(".ag-center-cols-container .ag-row", state="detached", timeout=3000)
     rows = page.query_selector_all(".ag-center-cols-container .ag-row")
-    assert len(rows) == 0, "Se encontraron resultados cuando no debería haber ninguno"
+    assert len(rows) == 0, f"Se encontraron {len(rows)} resultados cuando no debería haber ninguno"
 
 
 @then("I should see multiple results in the table")
