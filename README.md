@@ -1,8 +1,11 @@
 # Playwright Inventory Demo (Python + BDD)
 
-[![Playwright Tests](https://github.com/erniux/Playwright-Inventory-Demo-con-BDD/actions/workflows/tests.yml/badge.svg)](https://github.com/erniux/Playwright-Inventory-Demo-con-BDD/actions/workflows/tests.yml)  
+
 [![Python Version](https://img.shields.io/badge/python-3.11-blue)](https://www.python.org/)  
 [![Playwright](https://img.shields.io/badge/playwright-installed-119e1a)](https://playwright.dev/)
+[![Playwright Tests](https://github.com/erniux/Playwright-Inventory-Demo-con-BDD/actions/workflows/tests.yml/badge.svg)](https://github.com/erniux/Playwright-Inventory-Demo-con-BDD/actions/workflows/tests.yml) 
+[![Allure Report](https://img.shields.io/badge/Allure-Report-ff69b4?logo=allure&logoColor=white)](https://erniux.github.io/Playwright-Inventory-Demo-con-BDD/)
+
 
 Este proyecto es un **framework de pruebas automatizadas** construido con:
 
@@ -116,3 +119,5 @@ En cada ejecución del workflow, los resultados de Allure se guardan como un art
 ## ✨ Notas
 - La demo de paginación de AG-Grid a veces cambia su implementación, por lo que puede ser inestable.  
 - El objetivo del proyecto es **mostrar buenas prácticas de BDD y Playwright en Python** para portafolio profesional.  
+
+
