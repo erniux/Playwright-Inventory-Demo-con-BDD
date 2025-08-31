@@ -7,7 +7,8 @@
 
 [![Playwright Tests](https://github.com/erniux/Playwright-Inventory-Demo-con-BDD/actions/workflows/tests.yml/badge.svg)](https://github.com/erniux/Playwright-Inventory-Demo-con-BDD/actions/workflows/tests.yml) 
 
-[![Allure Report](https://img.shields.io/badge/Allure-Report-ff69b4?logo=allure&logoColor=white)](https://erniux.github.io/Playwright-Inventory-Demo-con-BDD/)
+[![Allure Report](https://img.shields.io/badge/Allure-Report-blue?logo=allure&logoColor=white)](https://erniux.github.io/Playwright-Inventory-Demo-con-BDD/)
+
 
 
 
