@@ -41,10 +41,11 @@ def check_multiple_results(page):
 
 @then(parsers.parse('I should see the columns "{columns}"'))
 def check_columns(page, columns):
+    # Esperar que al menos un header esté presente
+    page.wait_for_selector(".ag-header-cell-text", timeout=5000)
+
     expected_columns = [col.strip() for col in columns.split(",")]
     header_elements = page.query_selector_all(".ag-header-cell-text")
-
-    # Extraer los textos visibles de los encabezados
     header_texts = [h.inner_text().strip() for h in header_elements]
 
     for col in expected_columns:
