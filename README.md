@@ -1,5 +1,8 @@
 # Playwright Inventory Demo (Python + BDD)
 
+![Playwright Tests](https://github.com/erniux/Playwright-Inventory-Demo-con-BDD/actions/workflows/tests.yml/badge.svg)
+
+
 Este proyecto es un **framework de pruebas automatizadas** usando:
 - [Playwright](https://playwright.dev/python/)
 - [Pytest](https://docs.pytest.org/)
@@ -14,7 +17,7 @@ Las pruebas se realizan sobre demos públicas de **AG-Grid**:
 Clona el repositorio y entra al proyecto:
 
 ```bash
-git clone https://github.com/<tu-usuario>/playwright_inventory_demo.git
+git clone https://github.com/erniux/Playwright-Inventory-Demo-con-BDD.git
 cd playwright_inventory_demo
 
 ## Crear un entorno Virtuale instalar las dependencias
