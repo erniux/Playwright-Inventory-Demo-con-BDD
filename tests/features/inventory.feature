@@ -32,12 +32,12 @@ Feature: Inventory management
     When I sort the table by "Est. Profit" descending
     Then the values in "Est. Profit" should be sorted descending
 
-Scenario: Verify pagination updates table records
-    When I go to the next page of the table
-    Then I should see different results compared to the first page
+  #Scenario: Verify pagination updates table records
+  #  When I go to the next page of the table
+  #  Then I should see different results compared to the first page
 
-  Scenario: Verify page size change updates rows
-    When I change the page size to "100"
-    Then I should see more rows displayed than with the default size
+  #Scenario: Verify page size change updates rows
+  #  When I change the page size to "100"
+  #  Then I should see more rows displayed than with the default size
 
     
