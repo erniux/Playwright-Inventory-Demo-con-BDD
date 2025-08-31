@@ -40,12 +40,11 @@ jobs:
 
     - name: 📊 Generate Allure HTML Report
       run: |
-        pip install allure-pytest  # asegúrate de tener allure en el venv
         curl -o allure-2.20.1.tgz -L https://github.com/allure-framework/allure2/releases/download/2.20.1/allure-2.20.1.tgz
         tar -xvzf allure-2.20.1.tgz
         ./allure-2.20.1/bin/allure generate allure-results -o allure-report --clean
 
-    - name: 📦 Upload Allure HTML Report
+    - name: 📦 Upload Allure Report as Artifact
       uses: actions/upload-artifact@v4
       with:
         name: allure-report
