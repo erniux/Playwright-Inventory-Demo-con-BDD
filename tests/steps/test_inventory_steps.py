@@ -11,7 +11,10 @@ def open_inventory(page):
 
 @then("I should see the inventory table")
 def check_table(page):
-    assert page.is_visible(".ag-root"), "La tabla de inventario no se cargó"
+    page.wait_for_selector(".ag-center-cols-container .ag-row", timeout=5000)
+    rows = page.query_selector_all(".ag-center-cols-container .ag-row")
+    assert len(rows) > 0, "La tabla se cargó pero no tiene registros"
+
 
 
 @when(parsers.parse('I search for product "{product}"'))
